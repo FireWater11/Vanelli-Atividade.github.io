@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Atividade</title>
+    </head>
+    <body>
+        <h1>Formulário de inscricao do Curso APC</h1>
+        <form action="apagar">
+            <fieldset>
+
+                <legend>Dados Pessoais</legend>
+                <div>
+                    <label for="name">Nome:</label>
+                    <input id="name" type="text" autocomplete="on" placeholder="Digite seu nome completo" required>
+                </div>
+
+                <br>
+                <br>
+                <br>
+
+                <div>
+                    <label for="email">E-mail:</label>
+                    <input type="email" autocomplete="on" placeholder="exemplo@gmail.com" required>
+                </div>
+
+                <br>
+                <br>
+                <br>
+
+                <div>
+                    <label for="pass">Senha:</label>
+                    <input type="password" placeholder="Digite sua senha" required>
+                </div>
+
+                <br>
+                <br>   
+
+                <div>
+                    <label for="sexo">Sexualidade:</label>
+                    <br>
+                    <br>
+
+                    <label for="masculino">Masculino</label>
+                    <input name="sexo" id="masculino" type="radio" required>
+                    <label for="feminino">Feminino</label>
+                    <input name="sexo" id="feminino" type="radio">
+                    <label for="alien">Alien</label>
+                    <input name="sexo" id="alien" type="radio">
+                </div>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Informacoes do curso</legend>
+
+                <div>
+                    <label for="curse">Selecione uma faculdade:</label>
+                    <select name="curse" id="curse">
+                        <option selected disabled value="Escolha">--Escolha--</option>
+                        <option value="Enf">Enfermagem</option>
+                        <option value="Dir">Direito</option>
+                        <option value="Prg">Programacao</option>
+                        <option value="Avc">Aviacao</option>
+                        <option value="Vet">Veterinario</option>
+                    </select>
+                </div>
+                <br>
+                <br>
+                <div>
+                    <label for="interesse">Tema de interesse:</label>
+                    <input id="interesse" required type="text" placeholder="Digite o tema" >
+                </div>
+                <br>
+                <br>
+                <div>
+                    <label for="date">Data e horário:</label>
+                    <input id="date" type="datetime-local">
+                </div>
+                <br>
+                <br>
+                <div>
+                    <label for="hours">Carga horária(horas)</label>
+                    <input id="hours" type="number">
+                </div>
+                <br>
+                <br>
+                <div>
+                    <label for="quest">Deseja material impresso?</label>
+                    <input id="quest" type="checkbox">
+                    <label>Sim</label>
+                </div>
+                <br>
+                <br>
+
+                <label for="texto">Comentários:</label>
+                <div>
+                    <textarea cols="50" rows="10" name="texto" id="texto">Conte experiencias e duvidas...</textarea>
+                </div>
+            </fieldset>
+            <br>
+            <br>
+            <fieldset>
+                <legend>Finalizacao</legend>
+                <form action="/enviar" method="post">
+                    <input id="check" type="checkbox">
+                    <label for="check">Li e aceito os termos de usos.</label>
+                    <br>
+                    <br>
+                    <button type="submit">Enviar</button>
+                    <button id="apagar" type="reset">Apagar</button>
+                </form>
+            </fieldset>
+        </form>
+    </body>
+</html>

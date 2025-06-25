@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tela De Cadastro</title>
+    </head>
+    <body>
+        <fieldset align="center">
+            <legend>CADASTRO</legend>
+            <form action="perfil.html">
+                <label for="user">NOME DE USUÁRIO:</label>
+                <input placeholder="Crie um nome" id="user" required type="text">
+                <br><br>
+                <label for="email">ADICIONE UM EMAIL:</label>
+                <input placeholder="Seu email principal" id="email" required type="email">
+                <br><br>
+                <label for="pass">CRIE UMA SENHA:</label>
+                <input placeholder="Senha forte" id="pass" required min="8" type="password">
+                <br><br>
+                <label for="number-cpf">DIGITE SEU CPF:</label>
+                <input placeholder="Seu CPF" required id="number-cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" maxlength="11" type="number">
+                <br><br>
+                <label for="color">Selecione sua cor favorita:</label>
+                <input placeholder="Cor favorita" required id="color" type="color">
+                <br><br>
+                <label for="quest">DESEJA FAZER LOGIN AUTOMÁTICO NESSA MAQUINA?</label>
+                <input id="quest" type="checkbox">
+                <label for="quest">Sim, desejo.</label>
+                <br><br>
+                <button type="submit">CADASTRO</button>
+                <button type="reset">APAGAR</button>
+            </form>
+        </fieldset>
+    </body>
+</html>

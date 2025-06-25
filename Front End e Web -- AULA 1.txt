@@ -1,0 +1,32 @@
+servidor dns(domain name system)
+	usuario coloca o nome requisitado
+	esse nome é lancadi para um servidor DNS
+	entende o que digitou e procura qual o endereco IP 
+	devolve ao usuario
+	sites famosos se mantem no cache do navegador, que automaticamente ja devolve ao usuário
+
+ip(endereco fisico unico) 
+	toda maquina fisica tem um, é como se fosse um bairro, rua, sua localizacao
+endereco mac
+	
+navegadores
+	decodificam as informacoes, devolvem os arquivos ao cliente(html, css e js), para poder acessar, 
+	mostra ao usuario o que foi pedido
+
+
+
+guardam sites: oracle, AWS
+google sites(acessar depois)
+github web(ou sites)
+
+ftp -- transferir arquivos para outro site
+
+https -- criptografa as informacoes antes de mandar para o servidor
+	precisa de um certificado digital(deve comprar)
+		criptografa as informacoes
+
+fibra optica funciona com feixes de luz. Que ao chegar num servidor de "traducao" é transformado em codigos(sao cabos de vidro)
+
+por que o cabo tem 8 pininhos?
+
+CDM -- caches que armazenam informacoes que devem ser acessadas rapidamente. Netflix passa para a provedora de internet, melhorando velocidade.

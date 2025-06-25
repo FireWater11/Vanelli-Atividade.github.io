@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PERFIL</title>
+    </head>
+    <body>
+        <div>
+            <form action="/enviar" method="get" target="_blank">
+                <fieldset>
+                    <legend align="center">CONTEÚDO PESSOAL</legend>
+                    <table border="1">
+                        <tr>
+                            <th rowspan="10">INFORMACOES PESSOAIS</th>
+                            <th>NOME</th>
+                            <th>EMAIL</th>
+                            <th>TELEFONE</th>
+                        </tr>
+                        <tr>
+                            <th>&nbsp;&nbsp;&nbsp;Luidi Augusto Barancelli&nbsp;&nbsp;&nbsp;</th>
+                            <th>&nbsp;&nbsp;&nbsp;luidi.augusto1234@gmail.com&nbsp;&nbsp;&nbsp;</th>
+                            <th>&nbsp;&nbsp;+55 (46) 99870-7675&nbsp;&nbsp;</th>
+                        </tr>
+                    </table>
+                    <br>
+                    <br>
+                    <label for="profissao">PROFISSAO: <b>Programador Front-End</b></label>
+                    <br>
+                    <br>
+                    <label for="nasc">DATA DE NASCIMENTO</label>
+                    <input required  type="date">
+                    <br>
+                    <br>
+                    <label for="profissao">RESUMO PROFISSIONAL</label>
+                    <br>
+                    <textarea readonly cols="90" rows="6" name="profissao" id="profissao">Desenvolver, manter e implantar sistemas informatizados e escaláveis de acordo com metodologias e técnicas utilizadas pelas empresas, responsável por todo o ciclo de vida de desenvolvimento de softwares, desde a concepção até a implantação, buscando atender os objetivos com a máxima qualidade dentro dos prazos estabelecidos.</textarea>
+                </fieldset>
+
+                <fieldset>
+                    <legend align="center">HABILIDADES</legend>
+                        <input checked id="checkbox" type="checkbox">
+                        <label for="checkbox">COMUNICACAO</label>
+                        <br>
+                        <input id="checkbox" type="checkbox">
+                        <label for="checkbox">VALORES DE UM LÍDER</label>
+                        <br>
+                        <input checked id="checkbox" type="checkbox">
+                        <label for="checkbox">ENTENDIMENTO DA LÓGICA COMPUTACIONAL</label>
+                        <br>
+                        <input checked id="checkbox" type="checkbox">
+                        <label for="checkbox">CRIATIVIDADE</label>
+                        <br>
+                        <br>
+                        <label for="formation">SELECIONE SEU CURSO SUPERIOR</label>
+                        <select required name="formation" id="formation">
+                            <option selected value="UFPR">Universidade Federal do Paraná</option>
+                            <option value="USP">Universidade de São Paulo</option>
+                            <option value="PUCRS">Pontifícia Universidade Católica do Rio Grande do Sul</option>
+                            <option value="UNICAMP">Universidade Estadual de Campinas</option>
+                            <option value="Other">Outra></option>
+                        </select>
+                        <br>
+                        <br>
+                        <table border="1">
+                            <tr>
+                                <th>&nbsp;&nbsp;&nbsp;CURSO&nbsp;&nbsp;&nbsp;</th>
+                                <th>&nbsp;&nbsp;&nbsp;LOCAL&nbsp;&nbsp;&nbsp;</th>
+                                <th>&nbsp;&nbsp;&nbsp;CARGA HORÁRIA&nbsp;&nbsp;&nbsp;</th>
+                            </tr>
+                            <tr>
+                                <th>&nbsp;&nbsp;&nbspAprender e Crescer&nbsp;&nbsp;&nbsp</th>
+                                <th>&nbsp;&nbsp;&nbspSudotec(SESI/SENAI)&nbsp;&nbsp;&nbsp</th>
+                                <th>&nbsp;&nbsp;&nbsp540 Horas -- Março á Novembro&nbsp;&nbsp;&nbsp</th>
+                            </tr>
+                            <tr>
+                                <th>&nbsp;&nbsp;&nbspEnsino Médio Técnico(TDS)&nbsp;&nbsp;&nbsp</th>
+                                <th>&nbsp;&nbsp;&nbspLeonardo da Vinci -- CCMLV&nbsp;&nbsp;&nbsp</th>
+                                <th>&nbsp;&nbsp;&nbsp3.000 Mil horas -- 3 Anos.&nbsp;&nbsp;&nbsp</th>
+                            </tr>
+                            <tr>
+                                <th>&nbsp;&nbsp;&nbspSudotec -- Cursos Base&nbsp;&nbsp;&nbsp</th>
+                                <th>&nbsp;&nbsp;&nbspSudotec(Ponto Norte)&nbsp;&nbsp;&nbsp</th>
+                                <th>&nbsp;&nbsp;&nbsp150 Horas(2 anos)&nbsp;&nbsp;&nbsp</th>
+                            </tr>
+                        </table>
+                        <br>
+                        <br>
+                        <label for="idiomas">SELECIONE O SEU NÍVEL DE INGLES A SEGUIR:</label>
+                        <br>
+                        <br>
+                        <label for="ingles">INGLES</label>
+                        <br>
+                        <input type="radio" id="basic" name="grupo_opcoes" value="opcao1">
+                        <label for="opcao1">BÁSICO</label><br>
+
+                        <input type="radio" id="medium" name="grupo_opcoes" value="opcao2">
+                        <label for="opcao2">INTERMEDIÁRIO</label><br>
+
+                        <input type="radio" id="avanced" name="grupo_opcoes" value="opcao3">
+                        <label for="opcao3">AVANÇADO</label><br>
+                        <br>
+                        <br>
+                        <label for="Outro">Outro idioma:</label>
+                        <br>
+                        <select name="outro" id="outro">
+                            <option selected value="NLL">Nenhum</option>
+                            <option value="ESP">Espanhol</option>
+                            <option value="MND">Mandarim</option>
+                            <option value="ARB">Árabe</option>
+                            <option value="HND">Hindi</option>
+                            <option value="FRN">Frances</option>
+                            <option value="RUS">Russo</option>
+                        </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend align="center">UPLOADS</legend>
+                        <label for="certificados">CASO POSSUIR ALGUM CERTIFICADO, SELECIONE A PARTIR:</label>
+                        <br>
+                        <br>
+                        <input multiple type="file">
+                        <br>
+                        <br>
+                        <label for="imgUP">Upload via imagem</label>
+                        <input type="image">
+                </fieldset>
+                <br>
+                <br>
+                <label for="request"><pre><img src="favorite_24dp_FF0000_FILL0_wght400_GRAD0_opsz24.png"> De uma nota de 0 a 10 ao meu curriculo:</pre></label>
+                <input required type="number" min="0" max="10">
+                <br>
+                <br>
+                <button type="submit">ENVIAR</button>
+                <button type="reset">APAGAR</button>
+            </form>
+        </div>
+    </body>
+</html>

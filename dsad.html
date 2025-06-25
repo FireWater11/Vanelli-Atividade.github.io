@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style2.css">
+        <title>Aula 4</title>
+    </head>
+    <body style="margin: 0;">
+        <div id="div-inicial">
+            <h1>
+                Bem Vindo 
+            </h1>
+            <p>Este é o conteúdo da <span style="color: green;">página</span>.</p>
+        </div>
+
+        <form action="/serv" method="post" target="_blank" autocomplete="on"> 
+            <!-- target: abre outra pagina ao inves de substituir a que vc esta. 
+             autocomplete: lembra o que vc ja inseriu de informacoes antigamente-->
+            <label for="nome">Nome:</label>
+            <input type="text" required placeholder="Digite seu nome" maxlength="20" pattern="[A-Za-z]+" min="1"> 
+            <!-- required: torna a insercao de informacao obrigatoria naquele elemento-->
+            <!-- placeholder: da uma dica do que deve ser feito. maxlength: limita a quantidade de caracteres.-->
+            <button type="submit"> Enviar</button>
+            <br>
+            <br>
+            <input id="nome" type="checkbox" required>
+            <label for="nome">Aceito os termos de uso</label>
+            <br>
+            <br>
+            <label for="idade">Idade:</label>
+            <input id="idade" type="number" placeholder="Idade" maxlength="3" required>
+            <button type="submit">Enviar</button>
+            <br>
+            <br>
+            <label for="estado">Estado:</label>
+            <select id="estado" name="estado" id="estado" required>
+                <option selected value="PR">Paraná</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <!-- selected: por padrao, a opcao ira vir marcada.-->
+                <!-- size: define quantas informacoes vai mostrar, porem com o scroll do mouse, pode-se ir para baixo e mostrar mais-->
+                <!-- multiple: permite enviar mais de uma informacao-->
+                <!-- value: é a informacao que ele ira enviar(vai enviar PR, ao inves de Paraná, mas irá mostrar ao usuário Paraná)-->
+            </select>
+            <button id="estado" type="submit">Enviar</button>
+        </form>
+            <br>
+            <br>
+            <label for="texto">Texto: </label>
+            <textarea style="margin-left: 20px;" name="texto" id="texto" rows="10" cols="100">
+            </textarea>
+            <!-- textarea(tag): permite várias linhas de informacoes.-->
+            <!-- rows(linhas) e colums(colunas) podem ser definidas-->
+             
+            <fieldset> <!-- Juntar varios formularios-->
+                <legend>INFORMACOES</legend> <!-- Legenda do fieldset-->
+                <form action="">a</form>
+                <form action="">a</form>
+                <form action="">a</form>
+            </fieldset>
+
+            <br>
+            <form action="/enviar" method="post">
+                <label for="senha">Senha: </label>
+                <input placeholder="Digite sua senha" id="senha" type="password">
+                <button type="submit">Enviar</button>
+                <button type="reset">Apagar</button>
+
+                <br>
+                <br>
+                <p>Sexo:</p>
+                <label for="masculino">Masculino</label>
+                <input required type="radio" id="masculino" name="sexo">
+                <label for="feminino">Feminino</label>
+                <input required type="radio" id="feminino" name="sexo">
+                <button type="submit">Enviar</button>
+                <br>
+                <br>
+                <label for="data">Data:</label>
+                <input required type="date">
+                <button type="submit">Enviar</button>
+                <br>
+                <br>
+                <label for="tel">Telefone: </label>
+                <input type="tel">
+                <button type="submit">Enviar</button>
+            </form>
+    </body>
+</html>
