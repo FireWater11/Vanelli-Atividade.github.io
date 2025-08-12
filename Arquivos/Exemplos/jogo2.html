@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jogo da Memória Avançado</title>
+<style>
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+h1 {
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px #000;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 15px;
+  max-width: 500px;
+  width: 90%;
+}
+
+.card {
+  perspective: 1200px;
+  position: relative;
+}
+
+.card input {
+  display: none;
+}
+
+.card label {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding-top: 140%; /* aspecto da carta */
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.card:hover label {
+  box-shadow: 0 0 20px rgba(255,255,255,0.3);
+  transform: scale(1.05) rotateY(0deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0; left: 0;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  text-shadow: 0 0 5px #000;
+  user-select: none;
+  transition: background 0.5s ease;
+}
+
+.card-front {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(5px);
+  color: #fff;
+  font-size: 2rem;
+}
+
+.card-back {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  transform: rotateY(180deg);
+  font-size: 2.5rem;
+}
+
+.card input:checked + label {
+  transform: rotateY(180deg);
+}
+</style>
+</head>
+<body>
+
+<h1>🎨 Jogo da Memória Avançado</h1>
+<p>Clique nas cartas para revelar e encontre os pares!</p>
+
+<div class="board">
+
+  <div class="card">
+    <input type="checkbox" id="c1">
+    <label for="c1">
+      <div class="card-front">?</div>
+      <div class="card-back">🍎</div>
+    </label>
+  </div>
+
+  <div class="card">
+    <input type="checkbox" id="c2">
+    <label for="c2">
+      <div class="card-front">?</div>
+      <div class="card-back">🍌</div>
+    </label>
+  </div>
+
+  <div class="card">
+    <input type="checkbox" id="c3">
+    <label for="c3">
+      <div class="card-front">?</div>
+      <div class="card-back">🍎</div>
+    </label>
+  </div>
+
+  <div class="card">
+    <input type="checkbox" id="c4">
+    <label for="c4">
+      <div class="card-front">?</div>
+      <div class="card-back">🍌</div>
+    </label>
+  </div>
+
+  <div class="card">
+    <input type="checkbox" id="c5">
+    <label for="c5">
+      <div class="card-front">?</div>
+      <div class="card-back">🍇</div>
+    </label>
+  </div>
+
+  <div class="card">
+    <input type="checkbox" id="c6">
+    <label for="c6">
+      <div class="card-front">?</div>
+      <div class="card-back">🍓</div>
+    </label>
+  </div>
+
+  <div class="card">
+    <input type="checkbox" id="c7">
+    <label for="c7">
+      <div class="card-front">?</div>
+      <div class="card-back">🍇</div>
+    </label>
+  </div>
+
+  <div class="card">
+    <input type="checkbox" id="c8">
+    <label for="c8">
+      <div class="card-front">?</div>
+      <div class="card-back">🍓</div>
+    </label>
+  </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Currículo</title>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background: linear-gradient(135deg, #4b79a1, #283e51);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 4px #000;
+}
+
+header p {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  animation: fadeIn 1s ease;
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.section h2 {
+  border-left: 5px solid #4b79a1;
+  padding-left: 0.5rem;
+  color: #4b79a1;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.item {
+  margin-bottom: 1rem;
+}
+
+.item h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.item p {
+  margin: 0.2rem 0 0;
+  color: #666;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill {
+  background: #4b79a1;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  transition: transform 0.3s ease;
+}
+
+.skill:hover {
+  transform: scale(1.1);
+  background: #283e51;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>João da Silva</h1>
+  <p>Desenvolvedor Front-end | joao@email.com | (11) 99999-9999</p>
+</header>
+
+<div class="container">
+
+  <div class="section">
+    <h2>Resumo</h2>
+    <p>Profissional com experiência em desenvolvimento web, apaixonado por criar interfaces modernas e responsivas.</p>
+  </div>
+
+  <div class="section">
+    <h2>Experiência</h2>
+    <div class="item">
+      <h3>Desenvolvedor Front-end — Empresa X</h3>
+      <p>Jan 2020 — Atual</p>
+      <p>Responsável por desenvolver aplicações web usando HTML, CSS e JavaScript.</p>
+    </div>
+    <div class="item">
+      <h3>Estagiário em TI — Empresa Y</h3>
+      <p>Jan 2018 — Dez 2019</p>
+      <p>Auxílio na manutenção de sites e suporte técnico.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Educação</h2>
+    <div class="item">
+      <h3>Bacharelado em Ciência da Computação</h3>
+      <p>Universidade Z — Conclusão: 2019</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Habilidades</h2>
+    <div class="skills">
+      <div class="skill">HTML5</div>
+      <div class="skill">CSS3</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">React</div>
+      <div class="skill">Git</div>
+      <div class="skill">Figma</div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

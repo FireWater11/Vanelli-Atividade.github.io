@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Landing Animada</title>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #1e1e2f, #3a3a5c);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+header {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #ffcc00;
+  text-shadow: 2px 2px 5px #000;
+}
+
+.typing {
+  display: inline-block;
+  border-right: .15em solid orange;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 1.5rem;
+  width: 0;
+  animation: typing 4s steps(30, end) forwards, blink .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+section {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 12px;
+  width: 250px;
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 20px #ffcc00;
+}
+
+button {
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  color: #fff;
+  background: #ff416c;
+  box-shadow: 0 0 10px #ff416c, 0 0 20px #ff4b2b;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #ff416c, 0 0 40px #ff4b2b;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  background: rgba(0,0,0,0.3);
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Bem-vindo à Nossa Página</h1>
+  <div class="typing">100% HTML + CSS. Sem JavaScript.</div>
+</header>
+
+<section>
+  <h2>O que você encontra aqui</h2>
+  <div class="cards">
+    <div class="card">
+      🌟 Efeitos 3D
+    </div>
+    <div class="card">
+      🎨 Gradientes Animados
+    </div>
+    <div class="card">
+      🚀 Botões com Glow
+    </div>
+    <div class="card">
+      ✍️ Texto Digitando
+    </div>
+  </div>
+  <button>Comece Agora</button>
+</section>
+
+<footer>
+  Criado apenas com ❤️ HTML & CSS — by Professor
+</footer>
+
+</body>
+</html>

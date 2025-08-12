@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Testando JavaScript</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <button onclick="alertaGTA()"</button>
+            clique único
+        </button>
+
+        <button ondblclick="alerta()">
+            double clique
+        </button>
+        <button onmouseover="alertaMouse()">
+            mouse hover
+        </button>
+
+        <p id="text">texto original</p>
+        <button onclick="alterar_texto()">
+            CLIQUE AQUI P/ ALTERAR TEXTO
+        </button>
+
+        <button onclick="document.getElementById('text').style.fontSize = '30px'">
+            CLIQUE AQUI P/ ALTERAR TAMANHO DO TEXTO
+        </button>
+
+        <button onclick="document.getElementById('text').style.color = 'blue'">
+            CLIQUE AQUI P/ ALTERAR COR DO TEXTO
+        </button>
+
+        <button onclick="document.getElementById('text').style.backgroundColor = 'yellow'">
+            CLIQUE AQUI P/ ALTERAR COR DE FUNDO DO TEXTO
+        </button>
+
+        <button onclick="document.getElementById('text').style.textDecoration = 'underline'">
+            CLIQUE AQUI P/ SUBLINHAR TEXTO
+        </button>
+
+        <button onclick="document.getElementById('text').style.textDecoration = 'none'">
+            CLIQUE AQUI P/ REMOVER SUBLINHADO
+        </button>
+
+        <button onclick="document.getElementById('text').style.textDecoration = 'line-through'">
+            CLIQUE AQUI P/ RISCAR TEXTO
+        </button>
+        <div id="div">
+
+        </div>
+        <button onclick="document.getElementById('div').innerHTML += '<p>Texto adicionado</p>'">
+            Adicionar
+        </button>
+
+        <input type="text" id="inputText" placeholder="Digite algo aqui">
+        <button onclick="alert(document.getElementById('inputText').value)">
+            Exibir Input
+        </button>
+    </body>
+
+    <script src="script.js"></script>
+</html>

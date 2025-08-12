@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR" >
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Labirinto Interativo CSS</title>
+<style>
+  body {
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #eee;
+  }
+
+  .maze {
+    display: grid;
+    grid-template-columns: repeat(5, 60px);
+    grid-template-rows: repeat(5, 60px);
+    gap: 6px;
+    background: #222;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px #0f0;
+  }
+
+  /* Cada célula labirinto */
+  .cell {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: #333;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: inset 0 0 5px #000;
+  }
+
+  /* Portas: checkboxes escondidos */
+  .cell input[type="checkbox"] {
+    display: none;
+  }
+
+  /* Quando clicado, muda a cor */
+  .cell input[type="checkbox"]:checked + label {
+    background: #0f0;
+    box-shadow: 0 0 15px #0f0;
+  }
+
+  /* Células que são caminho mostram uma seta para o próximo caminho */
+  .cell label::after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border: 3px solid #0f0;
+    border-top: none;
+    border-left: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  /* Seta aparece quando a célula está aberta */
+  .cell input[type="checkbox"]:checked + label::after {
+    opacity: 1;
+  }
+
+  /* Labirinto: paredes entre células (bordas) */
+  /* Vamos deixar alguns blocos com bordas para formar um labirinto */
+
+  /* Exemplo: linha 1 */
+  .cell:nth-child(1),
+  .cell:nth-child(2),
+  .cell:nth-child(3) {
+    border-right: 3px solid #0f0;
+  }
+
+  /* Exemplo: bloqueia algumas células para labirinto */
+  .cell:nth-child(5),
+  .cell:nth-child(10),
+  .cell:nth-child(15),
+  .cell:nth-child(20),
+  .cell:nth-child(25) {
+    border-bottom: 3px solid #0f0;
+  }
+
+  /* Algumas bordas internas */
+  .cell:nth-child(7) {
+    border-left: 3px solid #0f0;
+  }
+  .cell:nth-child(8) {
+    border-bottom: 3px solid #0f0;
+  }
+  .cell:nth-child(12) {
+    border-right: 3px solid #0f0;
+  }
+
+  /* Hover para indicar que pode clicar */
+  .cell label:hover {
+    box-shadow: 0 0 10px #0f0;
+  }
+</style>
+</head>
+<body>
+
+<div class="maze">
+  <div class="cell">
+    <input type="checkbox" id="c1" />
+    <label for="c1" title="Clique para abrir"></label>
+  </div>
+  <div class="cell">
+    <input type="checkbox" id="c2" />
+    <label for="c2" title="Clique para abrir"></label>
+  </div>
+  <div class="cell">
+    <input type="checkbox" id="c3" />
+    <label for="c3" title="Clique para abrir"></label>
+  </div>
+  <div class="cell">
+    <input type="checkbox" id="c4" />
+    <label for="c4" title="Clique para abrir"></label>
+  </div>
+  <div class="cell">
+    <input type="checkbox" id="c5" />
+    <label for="c5" title="Clique para abrir"></label>
+  </div>
+
+  <div class="cell">
+    <input type="checkbox" id="c6" />
+    <label for="c6" title="Clique para abrir"></label>
+  </div>
+  <div class="cell">
+    <input type="checkbox" id="c7" />
+    <label for="c7" title="Clique para abrir"></label>
+  </div>
+  <div class="cell">
+    <input type="checkbox" id="c8" />
+    <label for="c8" title="Clique para abrir"></label>
+  </div>
+  <div class="cell">
+    <input type="checkbox" id="c9" />
+    <label for="c9" title="Clique para abrir"></label>
+  </div>
+  <div class="cell">
+    <input type="checkbox" id="c10" />
+    <label for="c10" title="Clique para abrir"></label>
+  </div>
+
+  <div class="cell">
+    <input type="checkbox" id="c11" />
+    <label for="c11" title="Clique para abrir"></label>
+  </div>
+  <div class="cell">
+    <input type="checkbox" id="c12" />
+    <label for="c12" title="Clique para abrir"></label>
+  </div>
+  <div class="cell">
+    <input type="checkbox" id="c13" />
+    <label for="c13" title="Clique para abrir"></label>
+  </div>
+  <div class="cell">
+    <input type="checkbox" id="c14" />
+    <label for="c14" title="Clique para abrir"></label>
+  </div>
+  <div class="cell">
+    <input type="checkbox" id="c15" />
+    <label for="c15" title="Clique para abrir"></label>
+  </div>
+
+  <div class="cell">
+    <input type="checkbox" id="c16" />
+    <label for="c16" title="Clique para abrir"></label>
+  </div>
+  <div class="cell">
+    <input type="checkbox" id="c17" />
+    <label for="c17" title="Clique para abrir"></label>
+  </div>
+  <div class="cell">
+    <input type="checkbox" id="c18" />
+    <label for="c18" title="Clique para abrir"></label>
+  </div>
+  <div class="cell">
+    <input type="checkbox" id="c19" />
+    <label for="c19" title="Clique para abrir"></label>
+  </div>
+  <div class="cell">
+    <input type="checkbox" id="c20" />
+    <label for="c20" title="Clique para abrir"></label>
+  </div>
+
+  <div class="cell">
+    <input type="checkbox" id="c21" />
+    <label for="c21" title="Clique para abrir"></label>
+  </div>
+  <div class="cell">
+    <input type="checkbox" id="c22" />
+    <label for="c22" title="Clique para abrir"></label>
+  </div>
+  <div class="cell">
+    <input type="checkbox" id="c23" />
+    <label for="c23" title="Clique para abrir"></label>
+  </div>
+  <div class="cell">
+    <input type="checkbox" id="c24" />
+    <label for="c24" title="Clique para abrir"></label>
+  </div>
+  <div class="cell">
+    <input type="checkbox" id="c25" />
+    <label for="c25" title="Clique para abrir"></label>
+  </div>
+</div>
+
+</body>
+</html>

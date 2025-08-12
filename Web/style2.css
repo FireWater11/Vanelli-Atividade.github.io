@@ -1,0 +1,162 @@
+body {
+    margin: 0;
+}
+
+header {
+    background-color: black;
+    height: 108px;
+    display: flex;
+}
+
+nav {
+    display: flex;
+}
+
+main {
+    height: 720px;
+    background-image: url(imagens/fundo_abstrato_texturizado_main.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#cabecalho-lista {
+    list-style: none; /* deixar sem os pontos feios */
+    gap: 10px;
+    display: flex;
+    margin-top: 30px;
+    text-align: center;
+}
+
+#logo {
+    margin-top: 0.2%; /* nao entendi pq nao pode ser mais, porem funcionou assim */
+    margin-left: 23%;
+    margin-right: 60px;
+}
+
+#imagem-seta {
+    width: 10px;
+    height: 1px;
+}
+
+li {
+    width: 142px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+    margin-top: 1.5%; /* nao entendi pq nao pode ser mais, porem funcionou assim */
+    color: white;
+}
+
+li:hover {
+    font-weight: bold; /* descobri q é assim q deixa em negrito no css */
+    font-size: 30px;
+    margin-right: 70px;
+    color: white;
+}
+
+#icone-pesquisa {
+    margin-top: 1.8%;
+    margin-left: 3.1%;
+}
+
+#icone-pesquisa:active {
+    width: 100px;
+    height: 100px;
+    margin-top: 1px;
+}
+
+#principal {
+    padding: 0;
+}
+
+#titulo-secundario {
+    margin: 0;  
+    padding: 280px 0px 0px 420px;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 50px;
+}
+
+#titulo-principal {
+    margin: 0;  
+    padding: 0px 0px 0px 410px;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-size: 150px;
+    margin-top: -15px;
+}
+
+#titulo-geral {
+    display: flex;
+}
+
+#titulo-terciario-tem {
+    margin: 0;
+    padding: 0 0 0 10px;
+    font-size: 70px;
+    display: flex;
+    height: 80px;
+    font-family: "Exile", system-ui;
+    color: #FFA366;
+}
+
+#titulo-terciario-luidi {
+    margin: 0;
+    margin-left: -110px;
+    padding: 70px 0 0 0px;
+    height: 100px;
+    font-size: 60px;
+    display: flex;
+    font-family: "Exile", system-ui;
+    color: #FFA366;
+}
+
+#conteudo {
+    margin-left: 420px;
+    margin-top: -50px;
+    color: #FFA366;
+    font-size: 27px;
+    font-family: "Open Sans", sans-serif;
+}
+
+#foto-principal {
+    border-radius: 50%;
+    width: 700px;
+    height: 700px;
+    margin-left: 150px;
+    margin-top: 50px;
+    display: inline-block;
+}
+
+#conteudo-sobre-mim {
+    display: flex;
+}
+
+#titulo-sobre-mim {
+    margin-top: 100px;
+    margin-left: 200px;
+    font-size: 50px;
+    font-family: "Open Sans", sans-serif;
+}
+
+
+#conteudo-principal {
+    margin-top: 30px;
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #333;
+    margin-left: 200px;
+    margin-right: 150px;
+}
+
+#botao {
+    font-size: 42px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: red;
+    width: 300px;
+    height: 70px;
+    border-radius: 50px;
+    margin-left: 1200px;
+    margin-top: -200px;
+    text-align: center;
+    padding-top: 14px;
+    color: white;
+}

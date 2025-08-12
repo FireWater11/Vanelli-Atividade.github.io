@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mini Jogo de Corrida</title>
+<style>
+body {
+  margin: 0;
+  background: #222;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
+
+h1 {
+  margin: 1rem 0;
+}
+
+.game {
+  position: relative;
+  width: 300px;
+  height: 500px;
+  background: #555;
+  overflow: hidden;
+  border: 4px solid #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #000;
+}
+
+.road {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    #333,
+    #333 40px,
+    #555 40px,
+    #555 80px
+  );
+  animation: roadMove 2s linear infinite;
+}
+
+@keyframes roadMove {
+  0% { background-position-y: 0; }
+  100% { background-position-y: 80px; }
+}
+
+.car {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 100px;
+  background: red;
+  border-radius: 5px;
+  box-shadow: inset 0 0 10px #fff;
+  z-index: 10;
+}
+
+.wheel {
+  position: absolute;
+  width: 10px;
+  height: 20px;
+  background: black;
+  bottom: 5px;
+}
+
+.wheel.left {
+  left: 5px;
+}
+
+.wheel.right {
+  right: 5px;
+}
+
+.obstacle {
+  position: absolute;
+  top: -50px;
+  width: 50px;
+  height: 100px;
+  background: yellow;
+  border-radius: 5px;
+  animation: obstacleMove 3s linear infinite;
+}
+
+.obstacle:nth-child(2) {
+  left: 60px;
+  animation-delay: 1s;
+}
+
+.obstacle:nth-child(3) {
+  left: 190px;
+  animation-delay: 2s;
+}
+
+@keyframes obstacleMove {
+  0% { top: -100px; }
+  100% { top: 600px; }
+}
+</style>
+</head>
+<body>
+
+<h1>🏎️ Corrida CSS</h1>
+<p>Carro fixo, estrada e obstáculos em movimento</p>
+
+<div class="game">
+  <div class="road"></div>
+
+  <div class="car">
+    <div class="wheel left"></div>
+    <div class="wheel right"></div>
+  </div>
+
+  <div class="obstacle" style="left: 10px;"></div>
+  <div class="obstacle"></div>
+  <div class="obstacle"></div>
+</div>
+
+</body>
+</html>

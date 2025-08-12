@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jogo da Estrela</title>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: radial-gradient(circle, #1a2a6c, #b21f1f, #fdbb2d);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px #000;
+}
+
+p {
+  margin-bottom: 2rem;
+}
+
+.board {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  perspective: 1200px;
+  width: 100px;
+  height: 140px;
+  position: relative;
+}
+
+.card input {
+  display: none;
+}
+
+.card label {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+}
+
+.card input:checked + label {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  text-shadow: 0 0 5px #000;
+}
+
+.card-front {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(3px);
+  color: #fff;
+}
+
+.card-back {
+  background: rgba(0, 0, 0, 0.8);
+  transform: rotateY(180deg);
+  font-size: 2.5rem;
+}
+
+.card-back.winner {
+  color: gold;
+  text-shadow: 0 0 20px gold;
+}
+</style>
+</head>
+<body>
+
+<h1>⭐ Jogo da Estrela</h1>
+<p>Escolha uma carta e descubra onde está a estrela!</p>
+
+<div class="board">
+
+  <div class="card">
+    <input type="radio" name="guess" id="c1">
+    <label for="c1">
+      <div class="card-front">?</div>
+      <div class="card-back">💔</div>
+    </label>
+  </div>
+
+  <div class="card">
+    <input type="radio" name="guess" id="c2">
+    <label for="c2">
+      <div class="card-front">?</div>
+      <div class="card-back winner">⭐</div>
+    </label>
+  </div>
+
+  <div class="card">
+    <input type="radio" name="guess" id="c3">
+    <label for="c3">
+      <div class="card-front">?</div>
+      <div class="card-back">💔</div>
+    </label>
+  </div>
+
+  <div class="card">
+    <input type="radio" name="guess" id="c4">
+    <label for="c4">
+      <div class="card-front">?</div>
+      <div class="card-back">💔</div>
+    </label>
+  </div>
+
+</div>
+
+</body>
+</html>

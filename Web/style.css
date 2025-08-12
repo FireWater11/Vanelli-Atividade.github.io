@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+body {
+    background-image: url(https://i.gifer.com/SUV4.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0px;
+}
+
+#contexto-1 {
+    background-color: #054f77;
+    width: 550px;
+    height: 450px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 23px;
+    margin-top: 80px;
+    margin-left: 180px;
+    /*background-color: #e2f8d9;*/
+    /*font-family: "Comic Sans MS", "Segoe Print", sans-serif; 
+    font-size: 18px; */
+}
+
+#contexto-2 {
+    background-color: lightblue;
+    width: 550px;
+    height: 450px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 23px;
+    margin-left: 1110px;
+    /*background-color: #fff9ae;*/
+    /*font-family: "Comic Sans MS", "Segoe Print", sans-serif; 
+    font-size: 18px; */
+}
+
+#nome {
+    font-size: 40px;
+    font-family: 'Pacifico', cursive;
+    padding-top: 20px;
+    text-align: center;
+}
+
+#texto-1 {
+    font-size: 20px;
+    text-align: center;
+    font-family: "Edu SA Hand", cursive;
+    margin: 20px;
+}
+
+#imagem-1 {
+    width: 300px;
+    height: 220px;
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+
+/*#contexto-1, #contexto-2 {
+    border-color: black;
+    border-width: 2px;
+    border-style: dotted;
+} */

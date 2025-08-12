@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Quiz Interativo</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+  .quiz-container {
+    background: rgba(0,0,0,0.5);
+    border-radius: 12px;
+    padding: 2rem 3rem;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 0 20px rgba(0,0,0,0.6);
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 5px #000;
+  }
+  .question {
+    margin-bottom: 2rem;
+  }
+  .question h2 {
+    margin-bottom: 1rem;
+  }
+  .options {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  input[type="radio"] {
+    display: none;
+  }
+  label {
+    background: rgba(255,255,255,0.15);
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, box-shadow 0.3s;
+    user-select: none;
+    box-shadow: 0 0 10px transparent;
+  }
+  label:hover {
+    background: rgba(255,255,255,0.3);
+  }
+  input[type="radio"]:checked + label {
+    background: #4caf50;
+    box-shadow: 0 0 15px #4caf50;
+    color: white;
+  }
+
+  /* Feedback para respostas certas e erradas */
+  /* Certo: opção com data-correct="true" marcada */
+  input[type="radio"][data-correct="true"]:checked + label {
+    background: #2e7d32;
+    box-shadow: 0 0 20px #2e7d32;
+  }
+  /* Errado: opção errada marcada */
+  input[type="radio"]:checked:not([data-correct="true"]) + label {
+    background: #c62828;
+    box-shadow: 0 0 20px #c62828;
+  }
+
+  /* Botão reset */
+  .reset-btn {
+    display: block;
+    margin: 0 auto;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    background: #333;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 0 10px #222;
+    transition: background 0.3s;
+  }
+  .reset-btn:hover {
+    background: #555;
+  }
+</style>
+</head>
+<body>
+
+<div class="quiz-container">
+
+  <h1>Quiz de Conhecimentos Gerais</h1>
+
+  <form id="quizForm">
+
+    <div class="question">
+      <h2>1. Qual a capital do Brasil?</h2>
+      <div class="options">
+        <input type="radio" id="q1a1" name="q1" data-correct="false" />
+        <label for="q1a1">Rio de Janeiro</label>
+
+        <input type="radio" id="q1a2" name="q1" data-correct="true" />
+        <label for="q1a2">Brasília</label>
+
+        <input type="radio" id="q1a3" name="q1" data-correct="false" />
+        <label for="q1a3">São Paulo</label>
+
+        <input type="radio" id="q1a4" name="q1" data-correct="false" />
+        <label for="q1a4">Salvador</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h2>2. Qual elemento químico tem o símbolo 'O'?</h2>
+      <div class="options">
+        <input type="radio" id="q2a1" name="q2" data-correct="true" />
+        <label for="q2a1">Oxigênio</label>
+
+        <input type="radio" id="q2a2" name="q2" data-correct="false" />
+        <label for="q2a2">Ouro</label>
+
+        <input type="radio" id="q2a3" name="q2" data-correct="false" />
+        <label for="q2a3">Prata</label>
+
+        <input type="radio" id="q2a4" name="q2" data-correct="false" />
+        <label for="q2a4">Hidrogênio</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h2>3. Qual é o maior planeta do nosso sistema solar?</h2>
+      <div class="options">
+        <input type="radio" id="q3a1" name="q3" data-correct="false" />
+        <label for="q3a1">Terra</label>
+
+        <input type="radio" id="q3a2" name="q3" data-correct="true" />
+        <label for="q3a2">Júpiter</label>
+
+        <input type="radio" id="q3a3" name="q3" data-correct="false" />
+        <label for="q3a3">Saturno</label>
+
+        <input type="radio" id="q3a4" name="q3" data-correct="false" />
+        <label for="q3a4">Marte</label>
+      </div>
+    </div>
+
+    <button type="reset" class="reset-btn">Reiniciar Quiz</button>
+
+  </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,252 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    overflow: hidden; /* sem scroll na tela */
+}
+
+header {
+    position: fixed;
+    width: 80vw;
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 600px;
+    gap: 100px; /* espaçamento */
+    z-index: 2; /* irá ficar por cima de todas as outras tags */
+
+    & img {
+        max-width: 250px; /* tamanho máximo da imagem */
+        max-height: 100px; /* tamanho máximo da imagem */
+    }
+
+    & nav {
+        & ul {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* três colunas, espaçamento de 1 fr(nesse caso 200px) */
+        }
+
+        & li {
+            font-weight: bold;
+            cursor: pointer;
+        }
+    }
+}
+
+section.container {
+    background: radial-gradient(#7f3d9e, #6d00d9);
+    height: 100vh;
+    position: relative;
+    padding-top: 120px; /* espaço para o header */
+
+    & .list {
+        width: 70vw;
+        height: 100%;
+        margin: auto;
+        position: relative;
+
+        & .item {
+            position: absolute;
+            inset: 0; /* ocupa todo o espaço do pai */
+
+            & .car_img {
+                position: absolute;
+                top: 30%;
+                transform: translateY( -50%);
+                width: 70%;
+
+                & img {
+                    width: 100%;
+                    transform: rotate(-30deg);
+                }
+            }
+        }
+
+        & .content {
+            position: absolute;
+            right: 100px;
+            width: 70%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: end;
+            gap: 20px;
+
+            & .car_information {
+                font-weight: bold;
+            }
+
+            & h2 {
+                font-size: 8em;
+                line-height: 1em;
+                font-family: 'League Gothic', sans-serif;
+            }
+
+            & .description {
+                color: #d9d9d9;
+                font-size: 18px;
+                text-align: right;
+                max-width: 85%;
+            }
+
+            & .information {
+                border-radius: 30px;
+                height: 40px;
+                width: 120px;
+                text-transform: uppercase;
+                border: 2px solid #7f3d9e;
+                background-color: #aef01b;
+                color: black;
+                cursor: pointer;
+                font-weight: bold;
+                /* font-family: 'League Gothic', sans-serif; */
+            }
+        }
+
+        &::before {
+            content: ''; 
+            position: absolute;
+            height: 200%;
+            width: 100%;
+            top: 50%;
+            border-top: 1px solid white;
+        }
+    }
+
+    & .arrows {
+        width: 70%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -25px);
+        display: flex;
+        justify-content: space-between;
+
+        & button:nth-child(1) { /* pegar o elemento filho especificadamente o 1(definido entre os parenteses) */
+            & img {
+                transform: scale(-1);
+            }
+        }
+
+        & button {
+            top: 60%;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+
+            & img {
+                margin-top: 4px;
+                width: 30px;
+                cursor: pointer;
+            }
+
+            &:hover {
+                background-color: #aef01b;
+                transition: 0.5s;
+            }
+        }
+    }
+
+    .indicators {
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+
+        & .number {
+            font-size: 5em;
+            font-family: 'League Gothic', sans-serif;
+        }
+
+        & ul {
+            display: flex;
+            gap: 15px;
+
+            & li {
+                width: 50px;
+                height: 5px;
+                background-color: white;
+                border-radius: 10px;
+                cursor: pointer;
+                transition: 0.5s;
+
+                &.active {
+                    background-color: #aef01b;
+                }
+            }
+        }
+    }
+}
+
+section.container {
+    & .list {
+        --calculation: 1;
+
+        & .item {
+            transform: translateX(calc(var(--calculation) * 100vh));
+            transition: 5s;
+            opacity: 0;
+
+            & .car_img {
+                transform: rotate(0);
+                transition: 0.5s;
+                transition-delay: 0.5s;
+            }
+
+            & .content {
+                & .car_information, h2, .description, .information {
+                    transform: translateX(calc(var(--calculation) * 200px));
+                    transition: 0.7s;
+                    transition-delay: 0.3s;
+                    opacity: 0;
+                }
+
+                & h2 {
+                    transition-delay: 0.5s;
+                }
+
+                & .description {
+                    transition-delay: 0.7s;
+                }
+
+                & .information {
+                    transition-delay: 0.9s;
+                }
+            }
+        }
+
+        & .active {
+            transform: translateX(0);
+            transition: 0.5s;
+            opacity: 1;
+
+            & .car_img {
+                transform: rotate(20deg);
+                opacity: 1;
+            }
+
+            & .content {
+                & .car_information, h2, .description, .information {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
